@@ -1,0 +1,14 @@
+﻿USE [CustomerData]
+GO
+/****** Object:  StoredProcedure [dbo].[UpdateUserFirst]    Script Date: 3/10/2021 11:46:17 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+Create Procedure [dbo].[UpdateUserFirst]
+@Id int,
+@FirstName VARCHAR(50)
+as
+update Customers Set
+Firstname = @FirstName
+where CustomerID = @Id
